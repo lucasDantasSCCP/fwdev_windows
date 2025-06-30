@@ -19,7 +19,7 @@ set(SOURCES
 )
 
 if(WIN32)
-
+    list(APPEND SOURCES ${CMAKE_SOURCE_DIR}/../../../source/port/windows/port_cpu.c)
 elseif(APPLE)
     list(APPEND SOURCES ${CMAKE_SOURCE_DIR}/../../../source/port/mac/port_cpu.c)
 elseif(UNIX)
