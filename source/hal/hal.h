@@ -32,6 +32,7 @@ extern "C"
 #include "utl_printf.h"
 #include "utl_dbg.h"
 #include "hal_cpu.h"
+#include "hal_serial.h"
 
 extern hal_cpu_driver_t HAL_CPU_DRIVER;
 extern hal_serial_driver_t HAL_SERIAL_DRIVER;

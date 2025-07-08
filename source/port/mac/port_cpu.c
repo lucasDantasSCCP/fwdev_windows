@@ -31,8 +31,7 @@ static void port_cpu_systick_handler_cbk(void *context)
 static void port_systick_create(void)
 {
     port_systick_queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    port_systick_timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, port_systick_queue);
-
+    port_systick_timer = dispatch_sourc,
     if(port_systick_timer)
     {
         dispatch_source_set_timer(port_systick_timer,

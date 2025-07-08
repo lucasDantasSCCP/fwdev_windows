@@ -14,12 +14,14 @@ set(SOURCES
     ${CMAKE_SOURCE_DIR}/../../../source/utl/printf/utl_printf.c
     ${CMAKE_SOURCE_DIR}/../../../source/hal/hal.c
     ${CMAKE_SOURCE_DIR}/../../../source/hal/hal_cpu.c
+    ${CMAKE_SOURCE_DIR}/../../../source/hal/hal_serial.c 
     ${CMAKE_SOURCE_DIR}/../../../source/port/common/port_stdout.c
     ${CMAKE_SOURCE_DIR}/../../../source/port/common/main.c
 )
 
 if(WIN32)
     list(APPEND SOURCES ${CMAKE_SOURCE_DIR}/../../../source/port/windows/port_cpu.c)
+    list(APPEND SOURCES ${CMAKE_SOURCE_DIR}/../../../source/port/windows/port_serial.c)
 elseif(APPLE)
     list(APPEND SOURCES ${CMAKE_SOURCE_DIR}/../../../source/port/mac/port_cpu.c)
 elseif(UNIX)

@@ -33,22 +33,6 @@ typedef struct hal_cpu_driver_s
     uint32_t (*time_elapsed_get_ms)(uint32_t tmr_old_ms);
 } hal_cpu_driver_t;
 
-typedef struct hal_serial_driver_s
-{
-    void (*init)(void);
-    void (*deinit)(void);
-    void (*reset)(void);
-    void (*watchdog_refresh)(void);
-    void (*id_get)(uint8_t id[HAL_CPU_ID_SIZE]);
-    uint32_t (*random_seed_get)(void);
-    uint32_t (*critical_section_enter)(hal_cpu_cs_level_t level);
-    void (*critical_section_leave)(uint32_t last_level);
-    void (*low_power_enter)(void);
-    void (*sleep_ms)(uint32_t tmr_ms);
-    uint32_t (*time_get_ms)(void);
-    uint32_t (*time_elapsed_get_ms)(uint32_t tmr_old_ms);
-} hal_serial_driver_t;
-
 void hal_cpu_init(void);
 void hal_cpu_deinit(void);
 void hal_cpu_reset(void);
