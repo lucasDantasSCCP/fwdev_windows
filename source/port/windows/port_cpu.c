@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <tchar.h>
 
 #include "hal.h"
 #include "app.h"
@@ -136,4 +137,46 @@ hal_cpu_driver_t HAL_CPU_DRIVER =
     .low_power_enter = port_cpu_low_power_enter,
     .sleep_ms = port_cpu_sleep_ms,
     .time_get_ms = port_cpu_time_get_ms,
+
 };
+
+static void port_serial_init()
+{
+
+}
+
+static void port_serial_open()
+{
+
+}
+
+static void port_serial_close()
+{
+
+}
+
+static void port_serial_configure()
+{
+
+}
+
+static void port_serial_multiple_COM()
+{
+
+}
+
+static void port_serial_interrupt()
+{
+
+}
+
+hal_serial_driver_t HAL_SERIAL_DRIVER = 
+{
+    .serial_init = port_serial_init,
+    .serial_open = port_serial_open,
+    .serial_close = port_serial_close,
+    .serial_configure = port_serial_configure,
+    .serial_multiple = port_serial_multiple_COM,
+    .serial_interrupt = port_serial_interrupt,
+    
+}

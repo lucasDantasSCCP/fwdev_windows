@@ -34,6 +34,7 @@ extern "C"
 #include "hal_cpu.h"
 
 extern hal_cpu_driver_t HAL_CPU_DRIVER;
+extern hal_serial_driver_t HAL_SERIAL_DRIVER;
 
 void hal_init(void);
 void hal_deinit(void);
